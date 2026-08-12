@@ -1,11 +1,8 @@
 /* ==========================================================================
-   Goodwin Michael - Interactive Portal Functions
-   Includes: Navigation, Services Tabs, CBT Analysis Engine, PHQ-9 Screener
+   Goodwin Michael - Interactive Collapsible Portal Logic
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-
-  /* Mobile Navigation Toggle */
   const navToggle = document.getElementById('navToggle');
   const navMenu = document.getElementById('navMenu');
 
@@ -21,15 +18,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* PHQ-9 Calc Listener */
   const calcBtn = document.getElementById('calcBtn');
   if (calcBtn) {
     calcBtn.addEventListener('click', calculatePHQ9);
   }
-
 });
 
-/* --- Interactive Services Tab Switcher --- */
+/* Toggle Collapsible Drawers */
+function toggleDrawer(drawerId) {
+  const drawer = document.getElementById(drawerId);
+  if (!drawer) return;
+  const parentItem = drawer.parentElement;
+
+  const isActive = parentItem.classList.contains('active');
+
+  // Close all drawers
+  document.querySelectorAll('.drawer-item').forEach(item => {
+    item.classList.remove('active');
+  });
+
+  // Open clicked drawer if it was not already open
+  if (!isActive) {
+    parentItem.classList.add('active');
+  }
+}
+
+/* Switch Service Tabs */
 function switchServiceTab(tabId, event) {
   document.querySelectorAll('.portal-tab-content').forEach(content => {
     content.style.display = 'none';
@@ -49,7 +63,7 @@ function switchServiceTab(tabId, event) {
   }
 }
 
-/* --- CBT Exercises Tab Switcher --- */
+/* Switch CBT Exercise Tabs */
 function switchCbtTool(toolId, event) {
   const tool1 = document.getElementById('thought-modifier');
   const tool2 = document.getElementById('grounding-tool');
@@ -71,7 +85,7 @@ function switchCbtTool(toolId, event) {
   }
 }
 
-/* --- Thought Reframer with Automated Analysis --- */
+/* Thought Reframer Analysis */
 function generateSimpleReframing() {
   const situation = document.getElementById('cbt-situation').value.trim();
   const unhelpful = document.getElementById('cbt-unhelpful').value.trim();
@@ -83,23 +97,22 @@ function generateSimpleReframing() {
   }
 
   const resultHTML = `
-    <p style="margin-bottom:0.5rem;"><strong>Trigger / Situation:</strong> ${situation || 'General Trigger'}</p>
-    <div style="background:#fee2e2; border-left:4px solid #ef4444; padding:0.75rem; border-radius:4px; margin-bottom:0.75rem;">
-      <strong style="color:#b91c1c;">Original Unhelpful Reaction:</strong>
-      <p style="color:#7f1d1d; margin:0; font-size:0.9rem;">"${unhelpful}"</p>
+    <p style="margin-bottom:0.5rem;"><strong>Trigger:</strong> ${situation || 'General Trigger'}</p>
+    <div style="background:#fee2e2; border-left:4px solid #ef4444; padding:0.65rem; border-radius:4px; margin-bottom:0.65rem;">
+      <strong style="color:#b91c1c; font-size:0.85rem;">Original Unhelpful Thought:</strong>
+      <p style="color:#7f1d1d; margin:0; font-size:0.875rem;">"${unhelpful}"</p>
     </div>
-    <div style="background:#e0f2fe; border-left:4px solid #0284c7; padding:0.75rem; border-radius:4px;">
-      <strong style="color:#0369a1;">Reframed Balanced Perspective:</strong>
-      <p style="color:#0c4a6e; margin:0; font-size:0.9rem;">"${balanced}"</p>
+    <div style="background:#e0f2fe; border-left:4px solid #0284c7; padding:0.65rem; border-radius:4px;">
+      <strong style="color:#0369a1; font-size:0.85rem;">Reframed Balanced View:</strong>
+      <p style="color:#0c4a6e; margin:0; font-size:0.875rem;">"${balanced}"</p>
     </div>
   `;
 
   document.getElementById('cbt-simple-text').innerHTML = resultHTML;
   document.getElementById('cbt-simple-result').style.display = 'block';
-  document.getElementById('cbt-simple-result').scrollIntoView({ behavior: 'smooth' });
 }
 
-/* --- Worry Balancer Logic --- */
+/* Worry Balancer Logic */
 function generateDecatSummary() {
   const topic = document.getElementById('decat-topic').value.trim();
   const worst = document.getElementById('decat-worst').value.trim();
@@ -112,17 +125,17 @@ function generateDecatSummary() {
   }
 
   const resultHTML = `
-    <p><strong>Worry Topic:</strong> ${topic || 'General Worry'}</p>
-    <p style="color:#dc2626;">🔴 <strong>Worst-Case:</strong> ${worst}</p>
-    <p style="color:#16a34a;">🟢 <strong>Best-Case:</strong> ${best || 'Not specified'}</p>
-    <p style="color:#0284c7;">🔵 <strong>Most Likely Reality:</strong> ${likely}</p>
+    <p><strong>Topic:</strong> ${topic || 'General Worry'}</p>
+    <p style="color:#dc2626; font-size:0.875rem;">🔴 <strong>Worst-Case:</strong> ${worst}</p>
+    <p style="color:#16a34a; font-size:0.875rem;">🟢 <strong>Best-Case:</strong> ${best || 'Not specified'}</p>
+    <p style="color:#0284c7; font-size:0.875rem;">🔵 <strong>Most Likely Reality:</strong> ${likely}</p>
   `;
 
   document.getElementById('decat-result-text').innerHTML = resultHTML;
   document.getElementById('decat-result-box').style.display = 'block';
 }
 
-/* --- PHQ-9 Screener Logic --- */
+/* PHQ-9 Screener Logic */
 function calculatePHQ9() {
   const form = document.getElementById('phq9-form');
   if (!form) return;
@@ -144,7 +157,7 @@ function calculatePHQ9() {
   }
 
   if (answeredCount < 9) {
-    alert("Please answer all 9 questions to receive your automated assessment result.");
+    alert("Please answer all 9 questions to receive your assessment result.");
     return;
   }
 
@@ -158,16 +171,15 @@ function calculatePHQ9() {
     if (score <= 4) {
       descText.innerHTML = "<strong>Interpretation: Minimal or no depression symptoms.</strong> Your responses indicate minimal psychological distress.";
     } else if (score <= 9) {
-      descText.innerHTML = "<strong>Interpretation: Mild depression symptoms.</strong> You may be experiencing mild mood distress. Early therapeutic support or stress management can help.";
+      descText.innerHTML = "<strong>Interpretation: Mild depression symptoms.</strong> Early therapeutic support can help prevent symptom progression.";
     } else if (score <= 14) {
-      descText.innerHTML = "<strong>Interpretation: Moderate depression symptoms.</strong> Your score suggests noticeable distress affecting daily activities. A structured consultation is recommended.";
+      descText.innerHTML = "<strong>Interpretation: Moderate depression symptoms.</strong> A structured clinical consultation is recommended.";
     } else if (score <= 19) {
-      descText.innerHTML = "<strong>Interpretation: Moderately severe depression symptoms.</strong> Your responses indicate significant distress. Professional clinical support (such as CBT) is strongly advised.";
+      descText.innerHTML = "<strong>Interpretation: Moderately severe depression symptoms.</strong> Professional support (CBT) is strongly advised.";
     } else {
-      descText.innerHTML = "<strong>Interpretation: Severe depression symptoms.</strong> Your score indicates severe depressive symptoms. Please schedule a clinical consultation.";
+      descText.innerHTML = "<strong>Interpretation: Severe depression symptoms.</strong> Please schedule a clinical consultation.";
     }
 
     resultsDiv.style.display = "block";
-    resultsDiv.scrollIntoView({ behavior: 'smooth' });
   }
 }
