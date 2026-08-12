@@ -250,6 +250,135 @@
       </div>
     </div>
   </section>
+  <!-- Interactive CBT Tools Section -->
+  <section class="section cbt-tools-section" id="cbt-tools">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Interactive CBT Exercises</span>
+        <h2 class="section-title">Self-Guided Coping Tools</h2>
+        <p class="section-lead">Try these simple, evidence-based tools to pause, reframe unhelpful thoughts, and ground yourself in moments of distress.</p>
+      </div>
+
+      <!-- CBT Tool Tabs -->
+      <div class="cbt-tabs">
+        <button class="cbt-tab-btn active" onclick="switchCbtTool('thought-modifier', event)">1. Simple Thought Modifier</button>
+        <button class="cbt-tab-btn" onclick="switchCbtTool('grounding-tool', event)">2. 5-4-3-2-1 Grounding</button>
+        <button class="cbt-tab-btn" onclick="switchCbtTool('decatastrophizer', event)">3. Worst-Case vs. Best-Case</button>
+      </div>
+
+      <!-- Tool 1: Simple Thought Modifier -->
+      <div id="thought-modifier" class="cbt-tool-card active">
+        <h3>Simple Thought Modifier</h3>
+        <p class="sub-text">Shift from a distressing automatic reaction to a balanced, constructive perspective.</p>
+        
+        <div class="cbt-steps-container">
+          <div class="form-group">
+            <label>1. What situation or trigger happened?</label>
+            <input type="text" id="cbt-situation" placeholder="e.g., 'Received a critical email at work'" class="cbt-input">
+          </div>
+
+          <div class="form-group">
+            <label>2. What is the automatic unhelpful thought?</label>
+            <input type="text" id="cbt-unhelpful" placeholder="e.g., 'I am going to get fired and I ruin everything'" class="cbt-input">
+          </div>
+
+          <div class="form-group">
+            <label>3. What is a realistic, balanced alternative view?</label>
+            <input type="text" id="cbt-balanced" placeholder="e.g., 'Feedback helps me improve. One mistake does not equal job loss.'" class="cbt-input">
+          </div>
+
+          <button type="button" class="btn btn-primary" onclick="generateSimpleReframing()">Reframe My Thought</button>
+
+          <div id="cbt-simple-result" class="cbt-result-box" style="display:none;">
+            <h4>Your Shifted Perspective</h4>
+            <div id="cbt-simple-text"></div>
+            <p class="cbt-note"><em>Practicing this regularly helps rewire automatic stress reactions over time.</em></p>
+            <a href="#booking" class="btn btn-secondary btn-sm" style="margin-top:0.75rem;">Discuss Thought Reframing in Therapy →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tool 2: 5-4-3-2-1 Grounding Guide -->
+      <div id="grounding-tool" class="cbt-tool-card" style="display:none;">
+        <h3>5-4-3-2-1 Sensory Grounding Technique</h3>
+        <p class="sub-text">Use your 5 senses to calm your nervous system and bring your mind back to the present moment.</p>
+
+        <div class="grounding-steps">
+          <div class="grounding-step">
+            <span class="step-num">5</span>
+            <div>
+              <strong>LOOK: 5 THINGS YOU CAN SEE</strong>
+              <p>Look around and quietly name 5 objects around you (e.g., pen, clock, doorway).</p>
+            </div>
+          </div>
+          <div class="grounding-step">
+            <span class="step-num">4</span>
+            <div>
+              <strong>TOUCH: 4 THINGS YOU CAN FEEL</strong>
+              <p>Notice 4 physical sensations (e.g., feet on the floor, clothes on shoulders, cool desk).</p>
+            </div>
+          </div>
+          <div class="grounding-step">
+            <span class="step-num">3</span>
+            <div>
+              <strong>LISTEN: 3 THINGS YOU CAN HEAR</strong>
+              <p>Listen for 3 background sounds (e.g., hum of a fan, distant birds, your breath).</p>
+            </div>
+          </div>
+          <div class="grounding-step">
+            <span class="step-num">2</span>
+            <div>
+              <strong>SMELL: 2 THINGS YOU CAN SMELL</strong>
+              <p>Notice 2 scents around you, or take two deep, deliberate breaths.</p>
+            </div>
+          </div>
+          <div class="grounding-step">
+            <span class="step-num">1</span>
+            <div>
+              <strong>TASTE: 1 THING YOU CAN TASTE</strong>
+              <p>Focus on 1 taste in your mouth, or take a refreshing sip of water.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tool 3: Decatastrophizing Matrix -->
+      <div id="decatastrophizer" class="cbt-tool-card" style="display:none;">
+        <h3>Worst-Case vs. Best-Case Balancer</h3>
+        <p class="sub-text">Break the cycle of anxiety by looking at all possible outcomes objectively.</p>
+
+        <div class="form-group">
+          <label>What event or outcome are you worrying about?</label>
+          <input type="text" id="decat-topic" placeholder="e.g., 'Giving a presentation tomorrow'" class="cbt-input">
+        </div>
+
+        <div class="decat-grid">
+          <div class="form-group">
+            <label style="color: #dc2626;">🔴 Worst-Case Scenario</label>
+            <textarea id="decat-worst" class="cbt-input" placeholder="e.g., 'I freeze and forget every word.'" rows="2"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label style="color: #16a34a;">🟢 Best-Case Scenario</label>
+            <textarea id="decat-best" class="cbt-input" placeholder="e.g., 'Everyone applauds and it goes flawlessly.'" rows="2"></textarea>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label style="color: #0284c7;">🔵 Most Likely Outcome</label>
+          <textarea id="decat-likely" class="cbt-input" placeholder="e.g., 'I might stumble slightly, but I'll get through it fine as I prepared.'" rows="2"></textarea>
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="generateDecatSummary()">Balance My Perspective</button>
+
+        <div id="decat-result-box" class="cbt-result-box" style="display:none;">
+          <h4>Balanced Outcome Summary</h4>
+          <div id="decat-result-text"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- Interactive PHQ-9 Screener Section -->
   <section class="section screener-section" id="screener">
