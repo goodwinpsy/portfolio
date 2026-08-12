@@ -105,3 +105,58 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+/* --- CBT Tools Functions --- */
+function switchCbtTool(toolId, event) {
+  document.getElementById('thought-modifier').style.display = 'none';
+  document.getElementById('grounding-tool').style.display = 'none';
+  document.getElementById('decatastrophizer').style.display = 'none';
+
+  document.querySelectorAll('.cbt-tab-btn').forEach(btn => btn.classList.remove('active'));
+
+  document.getElementById(toolId).style.display = 'block';
+  if (event && event.target) {
+    event.target.classList.add('active');
+  }
+}
+
+function generateSimpleReframing() {
+  const situation = document.getElementById('cbt-situation').value.trim();
+  const unhelpful = document.getElementById('cbt-unhelpful').value.trim();
+  const balanced = document.getElementById('cbt-balanced').value.trim();
+
+  if (!unhelpful || !balanced) {
+    alert("Please enter both your unhelpful thought and your balanced alternative thought.");
+    return;
+  }
+
+  const resultHTML = `
+    <p><strong>Trigger / Situation:</strong> ${situation || 'General Trigger'}</p>
+    <p style="color: #dc2626;"><strong>Unhelpful Thought:</strong> "${unhelpful}"</p>
+    <p style="color: #0284c7;"><strong>Balanced Reframe:</strong> "${balanced}"</p>
+  `;
+
+  document.getElementById('cbt-simple-text').innerHTML = resultHTML;
+  document.getElementById('cbt-simple-result').style.display = 'block';
+}
+
+function generateDecatSummary() {
+  const topic = document.getElementById('decat-topic').value.trim();
+  const worst = document.getElementById('decat-worst').value.trim();
+  const best = document.getElementById('decat-best').value.trim();
+  const likely = document.getElementById('decat-likely').value.trim();
+
+  if (!worst || !likely) {
+    alert("Please fill in at least the worst-case and most likely scenarios.");
+    return;
+  }
+
+  const resultHTML = `
+    <p><strong>Worry Topic:</strong> ${topic || 'General Worry'}</p>
+    <p>🔴 <strong>Worst-Case:</strong> ${worst}</p>
+    <p>🟢 <strong>Best-Case:</strong> ${best || 'Not specified'}</p>
+    <p>🔵 <strong>Most Likely Reality:</strong> ${likely}</p>
+  `;
+
+  document.getElementById('decat-result-text').innerHTML = resultHTML;
+  document.getElementById('decat-result-box').style.display = 'block';
+}
