@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Goodwin Michael — RCI & KSMHA Registered Clinical Psychologist. Evidence-informed psychological care, counselling and psychotherapy with online and in-person consultations.">
+<title>Goodwin Michael | Clinical Psychologist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#111827;--soft:#475467;--paper:#fbfaf7;--white:#fff;--cream:#f3eee6;--gold:#b18445;--gold2:#8f6833;--line:#e5ded4;--navy:#101b2d;--green:#16845b;--shadow:0 20px 60px rgba(17,24,39,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.65}a{text-decoration:none;color:inherit}
+.topline{background:var(--navy);color:#fff;text-align:center;padding:9px 18px;font-size:13px}.topline strong{color:#d8b87f}
+header{position:sticky;top:0;z-index:100;background:rgba(251,250,247,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{max-width:1180px;margin:auto;min-height:78px;padding:11px 22px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px}.mark{width:40px;height:40px;border-radius:12px;background:var(--navy);color:#fff;display:grid;place-items:center;font:700 21px "Playfair Display"}
+.brand-name{font:700 23px "Playfair Display";line-height:1.05}.brand-role{font-size:11px;color:#667085;font-weight:600;margin-top:4px}
+nav{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:600;color:var(--soft)}nav a:hover{color:var(--gold2)}.mobile-only{display:none}.nav-cta{background:var(--navy);color:#fff!important;padding:12px 18px;border-radius:999px}.mobile-only{display:none}.menu{display:none;border:0;background:none;font-size:27px;color:var(--navy)}
+.hero{max-width:1180px;margin:auto;padding:72px 22px 58px;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;background:#eee8df;border:1px solid #e1d7c8;border-radius:999px;padding:8px 14px;color:#55452f;font-size:13px;font-weight:700;margin-bottom:21px}.dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+h1{font:600 clamp(48px,6vw,76px)/1.02 "Playfair Display";letter-spacing:-.045em;margin:0 0 22px}h1 span{color:var(--gold)}
+.hero-copy{font-size:18px;color:var(--soft);max-width:650px;margin:0 0 28px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 21px;border-radius:999px;font-weight:700;font-size:14px;border:1px solid transparent}.primary{background:var(--navy);color:#fff}.secondary{background:#fff;border-color:var(--line)}
+.photo-card{min-height:540px;border-radius:30px;background:linear-gradient(145deg,#eee9e1,#f8f5ef);border:1px solid #e4ddd3;box-shadow:var(--shadow);padding:14px}.photo-frame{height:100%;min-height:510px;border-radius:22px;overflow:hidden;background:#e8e3da;position:relative}.photo-frame img{width:100%;height:100%;object-fit:cover}.fallback{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:35px;background:linear-gradient(135deg,#eee9e1,#e4ddd2)}.fallback strong{display:block;font:600 27px "Playfair Display";margin-bottom:7px}.fallback p{margin:0;color:#667085;font-size:14px}
+.availability{background:var(--navy);color:#fff;padding:15px 22px}.availability-inner{max-width:1180px;margin:auto;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;text-align:center;font-size:14px}.availability strong{color:#d9b77a}
+.section{max-width:1180px;margin:auto;padding:88px 22px;scroll-margin-top:90px}.head{max-width:720px;margin-bottom:38px}.kicker{color:var(--gold2);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:12px;margin-bottom:10px}h2{font:600 clamp(34px,4vw,50px)/1.1 "Playfair Display";letter-spacing:-.03em;margin:0 0 14px}.lead{font-size:17px;color:#667085;margin:0}
+.cards,.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card,.service{background:#fff;border:1px solid var(--line);border-radius:21px;padding:27px}.card h3,.service h3{margin:0 0 8px;font-size:18px}.card p,.service p{margin:0;color:#667085;font-size:14px}
+.services,.qualifications,.locations{background:var(--cream)}
+.service-number{font:500 20px "Playfair Display";color:var(--gold)}.service h3{margin-top:18px}
+.qual-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.qual-box{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px}.qual-box h3{font:600 27px "Playfair Display";margin:0 0 14px}.qual-list{margin:0;padding-left:20px;color:#475467}.qual-list li{margin:8px 0}.qual-highlight{display:inline-block;background:#eee8df;color:#665237;border-radius:999px;padding:7px 11px;font-size:12px;font-weight:800;margin-bottom:15px}
+.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.location{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px}.location-tag{display:inline-block;background:#eee8df;color:#665237;border-radius:999px;padding:6px 10px;font-size:11px;font-weight:800;margin-bottom:15px}.location h3{font:600 27px "Playfair Display";margin:0 0 8px}.location p{color:#667085;font-size:14px;margin:6px 0}
+.faq{max-width:850px}details{background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px 20px;margin-bottom:11px}summary{cursor:pointer;font-weight:700}details p{color:#667085;font-size:14px;margin:14px 0}
+.cta{max-width:1180px;margin:0 auto 90px;padding:0 22px}.cta-box{background:var(--navy);color:#fff;border-radius:30px;padding:52px;display:flex;align-items:center;justify-content:space-between;gap:35px}.cta-box p{color:#cbd2dd;max-width:620px;margin:0}.cta-box .btn{background:#d3ae6e;color:#151515}
+footer{background:#0c1422;color:#c7ced9;padding:45px 22px}.footer-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:30px}.footer-links{display:flex;gap:20px;font-size:13px}footer strong{color:#fff}footer p{font-size:13px;margin:6px 0}.disclaimer{max-width:1180px;margin:25px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:11px;color:#98a2b3}
+.floating{position:fixed;right:18px;bottom:18px;z-index:150;display:flex;flex-direction:column;gap:9px;align-items:flex-end}.float-btn{display:flex;align-items:center;gap:8px;color:#fff;padding:12px 16px;border-radius:999px;font-size:13px;font-weight:800;box-shadow:0 12px 28px rgba(0,0,0,.18)}.whatsapp{background:var(--green)}.call{background:var(--navy)}.float-btn svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:900px){.mobile-only{display:block!important}nav{display:none;position:absolute;top:70px;left:0;right:0;background:var(--paper);padding:18px 22px;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}nav.open{display:flex}nav a{padding:10px 0}.menu{display:block}.hero{grid-template-columns:1fr;gap:35px;padding-top:50px}.cards,.service-grid{grid-template-columns:1fr 1fr}.qual-grid,.location-grid{grid-template-columns:1fr}.cta-box{padding:40px;flex-direction:column;align-items:flex-start}}
+@media(max-width:600px){.nav{padding:11px 16px}.brand-name{font-size:20px}.hero{padding:38px 18px 42px}h1{font-size:48px}.hero-copy{font-size:16px}.photo-card{min-height:400px;padding:10px}.photo-frame{min-height:380px}.section{padding:65px 18px}.cards,.service-grid{grid-template-columns:1fr}.cta{padding:0 18px;margin-bottom:65px}.cta-box{padding:30px 25px}.footer-inner{display:block}.footer-links{margin-top:18px;flex-wrap:wrap}.floating{right:12px;bottom:12px}.float-btn{padding:11px 14px;min-width:118px;justify-content:center}.float-label{display:inline}}
+</style>
+</head>
+<body>
+<div class="topline"><strong>Online &amp; In-person Consultations</strong> · ReSolve Counselling &amp; Psychotherapy · Nirmala Medical Centre</div>
+
+<header><div class="nav">
+<a class="brand" href="#top"><div class="mark">G</div><div><div class="brand-name">Goodwin Michael</div><div class="brand-role">Clinical Psychologist</div></div></a>
+<button class="menu" id="menuButton" aria-label="Open menu" aria-expanded="false" aria-controls="nav">☰</button>
+<nav id="nav">
+<a href="#about">About</a><a href="#services">Services</a><a class="mobile-only" href="cbt-tools.html">CBT Tools &amp; Resources</a><a href="#qualifications">Qualifications</a><a href="#locations">Locations</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
+<a class="nav-cta" href="schedule-consultation.html">Schedule Consultation</a>
+</nav></div></header>
+
+<main id="top">
+<section class="hero">
+<div>
+<div class="eyebrow"><span class="dot"></span> RCI &amp; KSMHA Registered Clinical Psychologist</div>
+<h1>You don't have to <span>figure everything out alone.</span></h1>
+<p class="hero-copy">Evidence-informed psychological care for adults, adolescents, children and families — with the flexibility of online or in-person consultations.</p>
+<div class="actions"><a class="btn primary" href="schedule-consultation.html">Schedule Consultation</a><a class="btn secondary" href="#services">Explore Services</a></div>
+</div>
+<div class="photo-card"><div class="photo-frame">
+<img src="profile.jpg" alt="Goodwin Michael, Clinical Psychologist" onerror="this.style.display='none';document.getElementById('fallback').style.display='grid'">
+<div class="fallback" id="fallback"><div><strong>Your Professional Photograph</strong><p>Professional photograph</p></div></div>
+</div></div>
+</section>
+
+<section id="about" class="section">
+<div class="head"><div class="kicker">About</div><h2>A space to understand what you're going through.</h2><p class="lead">Psychological care begins with understanding your experience, identifying what is maintaining the difficulty, and building practical strategies that fit your life.</p></div>
+<div class="cards"><div class="card"><h3>Evidence-informed</h3><p>Therapeutic work is guided by established psychological approaches and tailored to your needs.</p></div><div class="card"><h3>Collaborative</h3><p>You are actively involved in understanding goals, choosing strategies and reviewing progress.</p></div><div class="card"><h3>Flexible access</h3><p>Choose online or in-person consultation based on your convenience and clinical requirements.</p></div></div>
+</section>
+
+<section id="services" class="services"><div class="section">
+<div class="head"><div class="kicker">Services</div><h2>Support for different stages of life.</h2><p class="lead">Psychological assessment, counselling and psychotherapy can be considered based on your concerns and goals.</p></div>
+<div class="service-grid">
+<div class="service"><div class="service-number">01</div><h3>Anxiety &amp; Depression</h3><p>Support for persistent worry, low mood, loss of motivation, emotional distress and related difficulties.</p></div>
+<div class="service"><div class="service-number">02</div><h3>OCD &amp; Related Concerns</h3><p>Structured psychological intervention for obsessions, compulsions, avoidance and anxiety-maintaining patterns.</p></div>
+<div class="service"><div class="service-number">03</div><h3>Relationships &amp; Family</h3><p>Support for communication difficulties, relationship stress, family concerns and interpersonal patterns.</p></div>
+<div class="service"><div class="service-number">04</div><h3>Personality &amp; Emotional Regulation</h3><p>Therapeutic work focused on emotional regulation, self-understanding, interpersonal difficulties and recurring patterns.</p></div>
+<div class="service"><div class="service-number">05</div><h3>Adolescent &amp; Adult Counselling</h3><p>Age-appropriate psychological support for academic, personal, emotional and developmental challenges.</p></div>
+<div class="service"><div class="service-number">06</div><h3>Stress, Burnout &amp; Life Challenges</h3><p>Practical strategies for coping with stress, transitions, work pressure and difficult life circumstances.</p></div>
+</div></div></section>
+
+<section id="qualifications" class="qualifications"><div class="section">
+<div class="head"><div class="kicker">Professional Profile</div><h2>Qualifications &amp; experience.</h2><p class="lead">Professional training and clinical experience supporting psychological assessment and therapeutic work.</p></div>
+<div class="qual-grid">
+<div class="qual-box"><span class="qual-highlight">QUALIFICATIONS</span><h3>Academic &amp; Professional Training</h3><ul class="qual-list"><li>B.Sc. Psychology</li><li>M.Sc. Psychology</li><li>PD Clinical Psychology (RCI)</li><li>RCI &amp; KSMHA Registered</li></ul></div>
+<div class="qual-box"><span class="qual-highlight">EXPERIENCE</span><h3>Clinical Experience</h3><p style="color:#667085">Clinical experience across hospital, clinic and school settings, with work involving psychological assessment, counselling and psychotherapy for children, adolescents and adults.</p><p style="color:#667085;margin-bottom:0">The focus is on practical, evidence-informed and individualised psychological care.</p></div>
+</div></div></section>
+
+<section id="locations" class="locations"><div class="section">
+<div class="head"><div class="kicker">Locations</div><h2>Choose the consultation format that suits you.</h2><p class="lead">Online consultations are available, with in-person consultations at both practice locations.</p></div>
+<div class="location-grid">
+<div class="location"><span class="location-tag">IN-PERSON</span><h3>ReSolve Counselling &amp; Psychotherapy</h3><p><strong>Muvattupuzha</strong></p><p>In-person psychological consultations and psychotherapy.</p></div>
+<div class="location"><span class="location-tag">IN-PERSON</span><h3>Nirmala Medical Centre</h3><p><strong>Muvattupuzha</strong></p><p>In-person psychological consultations at the medical centre.</p></div>
+</div>
+<div class="card" style="margin-top:20px"><h3>Online Consultation</h3><p>Online sessions are available for clients who prefer remote consultation, subject to suitability and applicable professional requirements.</p></div>
+</div></section>
+
+
+
+<section id="reviews" class="section">
+<div class="head"><div class="kicker">Client Reviews</div><h2>What clients say about their experience.</h2><p class="lead">Selected reviews shared by clients.</p></div>
+<div class="cards">
+<div class="card"><div aria-label="5 out of 5 stars" style="color:#b18445;letter-spacing:2px;font-size:14px;margin-bottom:12px">★★★★★</div><p style="font-size:16px;color:#344054">“I was a bit hesitant to start counselling, but Mr. Goodwin made the process very comfortable. I felt heard and understood throughout.”</p><p style="margin-top:15px;font-size:12px;font-weight:800;color:#8f6833">— Client Review</p></div>
+<div class="card"><div aria-label="5 out of 5 stars" style="color:#b18445;letter-spacing:2px;font-size:14px;margin-bottom:12px">★★★★★</div><p style="font-size:16px;color:#344054">“I had a really positive experience here. Felt comfortable from the first session and received helpful guidance throughout.”</p><p style="margin-top:15px;font-size:12px;font-weight:800;color:#8f6833">— Client Review</p></div>
+<div class="card"><div aria-label="5 out of 5 stars" style="color:#b18445;letter-spacing:2px;font-size:14px;margin-bottom:12px">★★★★★</div><p style="font-size:16px;color:#344054">“I am so happy and relaxed after this session. This was my first session with you, and I truly felt comfortable throughout. Thank you for the experience.”</p><p style="margin-top:15px;font-size:12px;font-weight:800;color:#8f6833">— Client Review</p></div>
+</div>
+</section>
+
+<section id="faq" class="section"><div class="head"><div class="kicker">FAQ</div><h2>Questions you may have before booking.</h2></div><div class="faq">
+<details><summary>What happens during the first consultation?</summary><p>The first consultation focuses on understanding your concerns, relevant background, current difficulties and goals, and deciding what kind of support may be appropriate.</p></details>
+<details><summary>Are online consultations available?</summary><p>Yes. Online consultations are available in addition to in-person consultations, subject to suitability and applicable professional requirements.</p></details>
+<details><summary>Where are in-person consultations available?</summary><p>In-person consultations are available at ReSolve Counselling &amp; Psychotherapy and Nirmala Medical Centre in Muvattupuzha.</p></details>
+<details><summary>How do I schedule a consultation?</summary><p>Use the Schedule Consultation button to access the booking calendar, or contact the practice through WhatsApp or phone.</p></details>
+<details><summary>Will I need medication?</summary><p>Psychologists do not prescribe medication. Where medication evaluation is clinically indicated, appropriate psychiatric consultation may be recommended.</p></details>
+</div></section>
+
+<div class="cta"><div class="cta-box"><div><div class="kicker" style="color:#d8b87f">Take the next step</div><h2>Start with a conversation.</h2><p>You don't need to have everything figured out before seeking help. Schedule a consultation to discuss what you're experiencing and what kind of support may be appropriate.</p></div><a class="btn" href="schedule-consultation.html">Schedule Consultation</a></div></div>
+</main>
+
+<footer><div class="footer-inner"><div><strong>Goodwin Michael</strong><p>Clinical Psychologist</p><p>RCI &amp; KSMHA Registered Clinical Psychologist</p></div><div class="footer-links"><a href="#services">Services</a><a class="mobile-only" href="cbt-tools.html">CBT Tools &amp; Resources</a><a href="#qualifications">Qualifications</a><a href="#locations">Locations</a><a href="schedule-consultation.html">Book</a></div></div><div class="disclaimer">Information on this website is provided for general educational purposes and does not replace professional assessment, diagnosis or treatment.</div></footer>
+
+<div class="floating">
+<a class="float-btn whatsapp" href="https://wa.me/917306687052?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20a%20consultation." target="_blank" rel="noopener" aria-label="Contact Goodwin Michael on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8.3 8.3 0 0 1-12.4 7.2L4 20l1.4-3.5A8.3 8.3 0 1 1 20 11.5Z"/><path d="M8.6 8.1c.2-.4.5-.4.8-.4h.5c.2 0 .4.1.5.4l.6 1.5c.1.3.1.5-.1.7l-.5.6c.6 1.1 1.5 2 2.6 2.6l.6-.5c.2-.2.4-.2.7-.1l1.5.6c.3.1.4.3.4.5v.5c0 .3 0 .6-.4.8-.4.2-1 .3-1.4.1-2.5-1-4.5-3-5.5-5.5-.2-.4-.1-1 .1-1.4Z"/></svg><span class="float-label">WhatsApp</span></a>
+<a class="float-btn call" href="tel:+917306687052" aria-label="Call Goodwin Michael"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5 9 3c.6-.1 1.1.2 1.3.8l1.1 3c.2.5 0 .9-.4 1.2L9.5 9.2a15.4 15.4 0 0 0 5.3 5.3l1.2-1.5c.3-.4.8-.6 1.2-.4l3 1.1c.6.2.9.7.8 1.3l-.5 2.4c-.1.6-.7 1-1.3 1C10.8 18.4 5.6 13.2 5.6 6.1c0-.6.4-1.2 1-1.3Z"/></svg><span class="float-label">Call</span></a>
+</div>
+
+<script>
+const menuButton=document.getElementById("menuButton");
+const nav=document.getElementById("nav");
+menuButton.addEventListener("click",()=>{const open=nav.classList.toggle("open");menuButton.setAttribute("aria-expanded",String(open));menuButton.setAttribute("aria-label",open?"Close menu":"Open menu");});
+nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");menuButton.setAttribute("aria-expanded","false");menuButton.setAttribute("aria-label","Open menu");}));
+</script>
+</body></html>
