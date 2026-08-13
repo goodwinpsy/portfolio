@@ -27,13 +27,9 @@
   --shadow:0 20px 60px rgba(17,24,39,.09);
 }
 
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
   margin:0;
@@ -158,7 +154,7 @@ nav a:hover{
   flex:none;
 }
 
-/* CBT MENU LINK IS HIDDEN UNTIL MOBILE/TABLET MENU */
+/* CBT TOOLS ONLY IN TABLET/MOBILE MENU */
 .mobile-only{
   display:none;
 }
@@ -286,28 +282,6 @@ h1 span{
   margin:0;
   color:#667085;
   font-size:14px;
-}
-
-/* AVAILABILITY */
-.availability{
-  background:var(--navy);
-  color:#fff;
-  padding:15px 22px;
-}
-
-.availability-inner{
-  max-width:1180px;
-  margin:auto;
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  flex-wrap:wrap;
-  text-align:center;
-  font-size:14px;
-}
-
-.availability strong{
-  color:#d9b77a;
 }
 
 /* SECTIONS */
@@ -876,19 +850,6 @@ footer p{
 
 </section>
 
-<!-- AVAILABILITY -->
-<div class="availability">
-  <div class="availability-inner">
-    <span><strong>Online</strong> consultations available</span>
-    <span>&middot;</span>
-    <span><strong>In-person</strong> consultations available</span>
-    <span>&middot;</span>
-    <span>ReSolve Counselling &amp; Psychotherapy</span>
-    <span>&middot;</span>
-    <span>Nirmala Medical Centre</span>
-  </div>
-</div>
-
 <!-- ABOUT -->
 <section id="about" class="section">
 
@@ -1193,7 +1154,6 @@ footer p{
 
   <div class="cards">
 
-    <!-- REVIEW 1 -->
     <div class="card">
 
       <div
@@ -1204,22 +1164,17 @@ footer p{
       </div>
 
       <p style="font-size:16px;color:#344054">
-
         &#8220;I was a bit hesitant to start counselling,
         but Mr. Goodwin made the process very comfortable.
         I felt heard and understood throughout.&#8221;
-
       </p>
 
-      <p
-        style="margin-top:15px;font-size:12px;font-weight:800;color:#8f6833"
-      >
+      <p style="margin-top:15px;font-size:12px;font-weight:800;color:#8f6833">
         &#8212; Client Review
       </p>
 
     </div>
 
-    <!-- REVIEW 2 -->
     <div class="card">
 
       <div
@@ -1230,22 +1185,17 @@ footer p{
       </div>
 
       <p style="font-size:16px;color:#344054">
-
         &#8220;I had a really positive experience here.
         Felt comfortable from the first session and received
         helpful guidance throughout.&#8221;
-
       </p>
 
-      <p
-        style="margin-top:15px;font-size:12px;font-weight:800;color:#8f6833"
-      >
+      <p style="margin-top:15px;font-size:12px;font-weight:800;color:#8f6833">
         &#8212; Client Review
       </p>
 
     </div>
 
-    <!-- REVIEW 3 -->
     <div class="card">
 
       <div
@@ -1256,16 +1206,12 @@ footer p{
       </div>
 
       <p style="font-size:16px;color:#344054">
-
         &#8220;I am so happy and relaxed after this session.
         This was my first session with you, and I truly felt
         comfortable throughout. Thank you for the experience.&#8221;
-
       </p>
 
-      <p
-        style="margin-top:15px;font-size:12px;font-weight:800;color:#8f6833"
-      >
+      <p style="margin-top:15px;font-size:12px;font-weight:800;color:#8f6833">
         &#8212; Client Review
       </p>
 
@@ -1359,10 +1305,7 @@ footer p{
 
     <div>
 
-      <div
-        class="kicker"
-        style="color:#d8b87f"
-      >
+      <div class="kicker" style="color:#d8b87f">
         Take the next step
       </div>
 
@@ -1378,10 +1321,7 @@ footer p{
 
     </div>
 
-    <a
-      class="btn"
-      href="schedule-consultation.html"
-    >
+    <a class="btn" href="schedule-consultation.html">
       Schedule Consultation
     </a>
 
@@ -1416,7 +1356,6 @@ footer p{
         Services
       </a>
 
-      <!-- CBT TOOLS AVAILABLE FROM MENU / FOOTER -->
       <a href="cbt-tools.html">
         CBT Tools &amp; Resources
       </a>
@@ -1458,17 +1397,12 @@ footer p{
     aria-label="Contact Goodwin Michael on WhatsApp"
   >
 
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-    >
+    <svg viewBox="0 0 24 24" aria-hidden="true">
       <path d="M20 11.5a8.3 8.3 0 0 1-12.4 7.2L4 20l1.4-3.5A8.3 8.3 0 1 1 20 11.5Z"></path>
       <path d="M8.6 8.1c.2-.4.5-.4.8-.4h.5c.2 0 .4.1.5.4l.6 1.5c.1.3.1.5-.1.7l-.5.6c.6 1.1 1.5 2 2.6 2.6l.6-.5c.2-.2.4-.2.7-.1l1.5.6c.3.1.4.3.4.5v.5c0 .3 0 .6-.4.8-.4.2-1 .3-1.4.1-2.5-1-4.5-3-5.5-5.5-.2-.4-.1-1 .1-1.4Z"></path>
     </svg>
 
-    <span class="float-label">
-      WhatsApp
-    </span>
+    <span>WhatsApp</span>
 
   </a>
 
@@ -1478,16 +1412,11 @@ footer p{
     aria-label="Call Goodwin Michael"
   >
 
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-    >
-      <path d="M6.6 3.5 9 3c.6-.1 1.1.2 1.3.8l1.1 3c.2.5 0 .9-.4 1.2L9.5 9.2a15.4 15.4 0 0 0 5.3 5.3l1.2-1.5c.3-.4.8-.6 1.2-.4l3 1.1c.6.2.9.7.8 1.3l-.5 2.4c-.1.6-.7 1-1.3 1C10.8 18.4 5.6 13.2 5.6 6.1c0-.6.4-1.2 1-1.3Z"></path>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6.6 3.5 9 3c.6-.1 1.1.2 1.3.8l1.1 3c.2.5 0 .9-.4 1.2L9.5 9.2a15.4 15.4 0 0 0 5.3 5.3l1.2-1.5c.3-.4.8-.6-1.2-.4l3 1.1c.6.2.9.7.8 1.3l-.5 2.4c-.1.6-.7 1-1.3 1C10.8 18.4 5.6 13.2 5.6 6.1c0-.6.4-1.2 1-1.3Z"></path>
     </svg>
 
-    <span class="float-label">
-      Call
-    </span>
+    <span>Call</span>
 
   </a>
 
@@ -1542,7 +1471,6 @@ footer p{
 
 })();
 
-/* Keep navigation state sensible if the device is rotated/resized */
 window.addEventListener("resize", function(){
 
   const menuButton = document.getElementById("menuButton");
